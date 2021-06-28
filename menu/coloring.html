@@ -37,34 +37,61 @@
             <div class="blockManagment">
                 <div class="title">Managment</div>
                 <div class="managmentOptions">
-                    <label>Napis</label>
-                    <input type="text" placeholder="Sex">
+                    <label>Text</label>
+                    <input class="text" type="text" placeholder="Sex">
                     <label>Background color</label>
-                    <input type="text" placeholder="Blue">
+                    <input class="backgroundColor" type="text" placeholder="Blue">
                     <label>Font size</label>
-                    <input type="text" placeholder="24px">
+                    <input class="fontSize" type="text" placeholder="24px">
                     <label>Font color</label>
-                    <input type="text" placeholder="White">
+                    <input class="fontColor" type="text" placeholder="White">
                     <label>Font weight</label>
-                    <input type="text" placeholder="500">
+                    <input class="fontWeight" type="text" placeholder="500">
                     <label>Opacity</label>
-                    <input type="text" placeholder="0.9">
+                    <input class="opacity" type="text" placeholder="0.9">
                     <label>Border</label>
-                    <input type="text" placeholder="2px solid black">
+                    <input class="border" type="text" placeholder="2px solid black">
                     <label>Border Radius</label>
-                    <input type="text" placeholder="2px">
+                    <input class="borderRadius" type="text" placeholder="2px">
+                    <label>Text Align</label>
+                    <input class="textAlign" type="text" placeholder="center">
                 </div>
             </div>
+
+
             <div class="blockDisplay">
-                <div class="title">Display</div>
-                <div class="block">SEX</div>
+                <div class="title" style="border-bottom: 4px solid rgb(22, 22, 22);">Display</div>
+                <!-- Block to show -->
+                <div class="block">Sex</div>
+                <!-- Block to show -->
             </div>
-            <div class="optionList">
-                <div class="title">List</div>
+
+
+            <div class="sizes">
+                <div class="title">Sizes</div>
+                    <div class="sizesOptions">
+                    <label>Width</label>
+                    <input class="width" type="text" placeholder="200px">
+                    <label>Height</label>
+                    <input class="height" type="text" placeholder="200px">
+                    <label>Margin</label>
+                    <input class="margin" type="text" placeholder="20px">
+                    <label>Padding</label>
+                    <input class="padding" type="text" placeholder="20px">
+                    <label>Postion Top</label>
+                    <input class="posTop" type="text" placeholder="50px">
+                    <label>Postion Right</label>
+                    <input class="posRight" type="text" placeholder="50px">
+                    <label>Postion Bottom</label>
+                    <input class="posBottom" type="text" placeholder="50px">
+                    <label>Postion Left</label>
+                    <input class="posLeft" type="text" placeholder="50px">
+                    <input class="submit" onclick="show()" type="submit" value="Confirm">
+                </div>
             </div>
         </div>
         <script src="../jquery.js"></script>
-        <script src="rollScript.js"></script>
+        <script src="coloring.js"></script>
     </div>
 </body>
 </html>

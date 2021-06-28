@@ -39,7 +39,8 @@ a {
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(48, 48, 48);
+    background: rgb(143,0,168);
+background: linear-gradient(357deg, rgba(143,0,168,1) 0%, rgba(120,17,162,1) 41%, rgba(176,0,223,1) 100%, rgba(103,16,138,1) 100%);
     cursor: default;
 }
 
@@ -50,6 +51,8 @@ body {
     background-color: rgb(34, 34, 34);
     width: 100%;
     font-size: 30px;
+    -webkit-box-shadow: 0px 0px 14px 2px #000000; 
+box-shadow: 0px 0px 14px 2px #000000;
 }
 
 .siteName {
@@ -85,21 +88,29 @@ body {
 
 button {
     outline: none;
-    border: 2px solid rgb(48, 48, 48);
+    border: none;
+    padding: 2px;
+    margin: 1px;
     background-color: rgb(26, 26, 26);
     color: rgb(255, 255, 255);
+    transition: all 0.2s ease-in;
 }
 
 button:hover, button:active {
     outline: none;
-    border: 2px solid rgb(48, 48, 48);
+    border: none;
     background-color: rgb(88, 88, 88);
     cursor: pointer;
-    transition: all 0.2s ease-in;
+}
+
+.option {
+    opacity: 0.9;
 }
 
 .content {
     background-color: rgb(34, 34, 34);
+    -webkit-box-shadow: 0px 0px 14px 2px #000000; 
+    box-shadow: 0px 0px 14px 2px #000000;
 }
 
 .gallery {
@@ -138,19 +149,21 @@ button:hover, button:active {
 .link {
     font-weight: 600;
     transition: all 0.2s ease-in-out;
-    color: rgb(187, 187, 187);
+    color: rgb(231, 231, 231);
     letter-spacing: 1px;
     width: 100%;
     padding: 5px;
 }
 
 .link:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgb(88, 88, 88);
+    background-color: rgb(185, 16, 201);
 }
 
 .footer {
     background-color: rgb(34, 34, 34);
     padding: 5px 0px 5px 0px;
     text-align: center;
+    margin-top: 50px;
+    -webkit-box-shadow: 0px 0px 14px 2px #000000; 
+box-shadow: 0px 0px 14px 2px #000000;
 }

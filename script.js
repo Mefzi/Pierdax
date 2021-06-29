@@ -2,7 +2,7 @@ let clock = document.querySelector('.clock');
 let papiez = new Audio();
 papiez.src = "assets/papiez.mp3";
 
-function counting() {
+counting = () => {
 
     let date = new Date();
 
@@ -20,5 +20,34 @@ function counting() {
     setInterval(counting,1000);
 
 }
+
+let article = $('.article');
+let gallery = $('.gallery');
+// let starterStatus = "USED";
+// let galleryStatus = "UNUSED";
+let used = true;
+
+const changing = () => {
+
+    if(used == true) {
+        used = false;
+        gallery.css('display', 'none');
+        article.css('display', 'block');
+        
+    }
+    else {
+        used = true;
+        article.css('display', 'none');
+        gallery.css('display', 'flex');
+        
+    }
+
+}
+
+let starterButton = document.querySelector('.starterButton');
+starterButton.addEventListener("click",changing);
+let galleryButton = document.querySelector('.galleryButton')
+galleryButton.addEventListener("click",changing);
+
 
 window.addEventListener("load",counting);

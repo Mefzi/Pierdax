@@ -24,6 +24,7 @@ counting = () => {
 let article = $('.article');
 let gallery = $('.gallery');
 let source = $('.source');
+source.css('display', 'none');
 // let starterStatus = "USED";
 // let galleryStatus = "UNUSED";
 let used = true;

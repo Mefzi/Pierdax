@@ -23,6 +23,7 @@ counting = () => {
 
 let article = $('.article');
 let gallery = $('.gallery');
+let source = $('.source');
 // let starterStatus = "USED";
 // let galleryStatus = "UNUSED";
 let used = true;
@@ -33,6 +34,7 @@ const changingToArticle = () => {
     if(used == true) {
         gallery.css('display', 'none');
         article.css('display', 'block');
+        source.css('display', 'none');
     }
 
 }
@@ -43,9 +45,9 @@ const changingToGallery = () => {
     if(used == false) {
         article.css('display', 'none');
         gallery.css('display', 'flex');
+        source.css('display', 'block');
     }
 }
-
 
 let starterButton = document.querySelector('.starterButton');
 starterButton.addEventListener("click",changingToArticle);

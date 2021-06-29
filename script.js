@@ -25,32 +25,32 @@ let article = $('.article');
 let gallery = $('.gallery');
 // let starterStatus = "USED";
 // let galleryStatus = "UNUSED";
-let used = false;
+let used = true;
 
-let aShow = "YES";
-let gShow = "NO";
+const changingToArticle = () => {
 
-const changing = () => {
-
+    used = true;
     if(used == true) {
-        used = false;
         gallery.css('display', 'none');
         article.css('display', 'block');
-        
-    }
-    else {
-        used = true;
-        article.css('display', 'none');
-        gallery.css('display', 'flex');
-        
     }
 
 }
 
+const changingToGallery = () => {
+
+    used = false;
+    if(used == false) {
+        article.css('display', 'none');
+        gallery.css('display', 'flex');
+    }
+}
+
+
 let starterButton = document.querySelector('.starterButton');
-starterButton.addEventListener("click",changing);
+starterButton.addEventListener("click",changingToArticle);
 let galleryButton = document.querySelector('.galleryButton')
-galleryButton.addEventListener("click",changing);
+galleryButton.addEventListener("click",changingToGallery);
 
 
 window.addEventListener("load",counting);

@@ -25,7 +25,10 @@ let article = $('.article');
 let gallery = $('.gallery');
 // let starterStatus = "USED";
 // let galleryStatus = "UNUSED";
-let used = true;
+let used = false;
+
+let aShow = "YES";
+let gShow = "NO";
 
 const changing = () => {
 

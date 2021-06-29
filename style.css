@@ -188,13 +188,18 @@ button.galleryButton {
 }
 
 .articleTitle {
-    font-size: 48px;
+    font-size: 72px;
     font-weight: 700;
 }
 
 .articleContent {
-    font-size: 22px;
-    text-indent: 20px;
+    font-size: 28px;
+    text-indent: 10%;
+}
+
+.articleContent img {
+    margin: 10px 10px 10px 0px;
+    border: 4px solid white;
 }
 
 .author {

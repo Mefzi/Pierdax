@@ -40,7 +40,7 @@ body {
     margin: 0;
     padding: 0;
     background: rgb(143,0,168);
-background: linear-gradient(357deg, rgba(143,0,168,1) 0%, rgba(120,17,162,1) 41%, rgba(176,0,223,1) 100%, rgba(103,16,138,1) 100%);
+    background: linear-gradient(357deg, rgba(143,0,168,1) 0%, rgba(120,17,162,1) 41%, rgba(176,0,223,1) 100%, rgba(103,16,138,1) 100%);
     cursor: default;
 }
 
@@ -52,7 +52,7 @@ background: linear-gradient(357deg, rgba(143,0,168,1) 0%, rgba(120,17,162,1) 41%
     width: 100%;
     font-size: 30px;
     -webkit-box-shadow: 0px 0px 14px 2px #000000; 
-box-shadow: 0px 0px 14px 2px #000000;
+    box-shadow: 0px 0px 14px 2px #000000;
 }
 
 .siteName {
@@ -113,18 +113,20 @@ button:hover, button:active {
     box-shadow: 0px 0px 14px 2px #000000;
 }
 
+
+.photo {
+    margin-bottom: 20px;
+    width: 22%;
+    margin: 0px 25px 25px 25px;
+}
+
 .gallery {
     padding: 25px;
     justify-content:space-between;
     align-content: center;
     display: flex;
     flex-wrap: wrap;
-}
-
-.photo {
-    margin-bottom: 20px;
-    width: 22%;
-    margin: 0px 25px 25px 25px;
+    display: none;
 }
 
 .gallery img {
@@ -165,5 +167,40 @@ button:hover, button:active {
     text-align: center;
     margin-top: 50px;
     -webkit-box-shadow: 0px 0px 14px 2px #000000; 
-box-shadow: 0px 0px 14px 2px #000000;
+    box-shadow: 0px 0px 14px 2px #000000;
+}
+
+button.starterButton {
+    margin: 0;
+    width: 50%;
+    padding:5px;
+}
+
+button.galleryButton {
+    margin-left: -7.3px;
+    width: 50%;
+    padding:5px;
+}
+
+.article {
+    padding: 50px;
+    display: default;
+}
+
+.articleTitle {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.articleContent {
+    font-size: 22px;
+    text-indent: 20px;
+}
+
+.author {
+    text-align: right;
+    padding: 10px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    font-size: 28px;
 }

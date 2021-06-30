@@ -188,7 +188,16 @@ button.galleryButton {
 }
 
 .gallery2 {
-    margin-top: -50px;
+    display: none;
+    flex-wrap: wrap;
+}
+
+.gallery3 {
+    display: none;
+    flex-wrap: wrap;
+}
+
+.gallery4 {
     display: none;
     flex-wrap: wrap;
 }
@@ -220,7 +229,7 @@ button.galleryButton {
     display: none;
     justify-content: center;
     align-content: center;
-    grid-template-columns: repeat(2, 20%);
+    grid-template-columns: repeat(4, 20%);
     grid-template-rows: repeat(1, 50px);
     margin-top: 10px;
 }

@@ -29,6 +29,8 @@ source.css('display', 'none');
 let news = $('.news');
 let gallery1 = $('.gallery1');
 let gallery2 = $('.gallery2');
+let gallery3 = $('.gallery3');
+let gallery4 = $('.gallery4');
 
 // BUTTONS //
 let sButtons = $('.starterOption');
@@ -73,14 +75,36 @@ const changingToGallery = () => {
 const changingToGallery1 = () => {
 
     gallery1.css('display','flex');
-    gallery2.css('display','none');    
+    gallery2.css('display','none');
+    gallery3.css('display','none');  
+    gallery4.css('display','none');   
 
 }
 
 const changingToGallery2 = () => {
 
     gallery1.css('display','none');
-    gallery2.css('display','flex');   
+    gallery2.css('display','flex');
+    gallery3.css('display','none');  
+    gallery4.css('display','none'); 
+
+}
+
+const changingToGallery3 = () => {
+
+    gallery1.css('display','none');
+    gallery2.css('display','none');   
+    gallery3.css('display','flex');  
+    gallery4.css('display','none'); 
+
+}
+
+const changingToGallery4 = () => {
+
+    gallery1.css('display','none');
+    gallery2.css('display','none');   
+    gallery3.css('display','none');  
+    gallery4.css('display','flex'); 
 
 }
 
@@ -101,5 +125,9 @@ let beerButton = document.querySelector('.beerButton');
 beerButton.addEventListener("click", changingToGallery1);
 let helltakerButton = document.querySelector('.helltakerButton');
 helltakerButton.addEventListener("click", changingToGallery2);
+let fubukiButton = document.querySelector('.fubukiButton');
+fubukiButton.addEventListener("click", changingToGallery3);
+let konButton = document.querySelector('.konButton');
+konButton.addEventListener("click", changingToGallery4);
 
 window.addEventListener("load",counting);

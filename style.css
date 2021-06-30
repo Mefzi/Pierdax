@@ -188,6 +188,7 @@ button.galleryButton {
 }
 
 .gallery2 {
+    margin-top: -50px;
     display: none;
     flex-wrap: wrap;
 }

@@ -12,7 +12,7 @@ const show = () => {
     let opacity = document.querySelector('.opacity').value;
     let border = document.querySelector('.border').value;
     let borderRadius = document.querySelector('.borderRadius').value;
-    let textAlign = document.querySelector('.textAlign').value;
+    let letterSpacing = document.querySelector('.letterSpacing').value;
 
     let width = document.querySelector('.width').value;
     let height = document.querySelector('.height').value;
@@ -22,6 +22,7 @@ const show = () => {
     let posRight = document.querySelector('.posRight').value;
     let posBottom = document.querySelector('.posBottom').value;
     let posLeft = document.querySelector('.posLeft').value;
+    let textAlign = document.querySelector('.textAlign').value;
 
 
     // Taking data from variables and changing style
@@ -33,7 +34,7 @@ const show = () => {
     block.css('opacity', opacity);
     block.css('border', border);
     block.css('border-radius', borderRadius);
-    block.css('text-align', textAlign);
+    block.css('letter-spacing', letterSpacing);
 
     block.css('width', width);
     block.css('height', height);
@@ -43,9 +44,11 @@ const show = () => {
     block.css('right', posRight);
     block.css('bottom', posBottom);
     block.css('left', posLeft);
+    block.css('text-align', textAlign);
 
 }
 
-confirm.setAttribute("onclick",`show()`);
+setInterval(show, 100);
+// confirm.setAttribute("onclick",`show()`);
 
 

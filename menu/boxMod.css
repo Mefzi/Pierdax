@@ -83,17 +83,21 @@ input {
     border:none;
 }
 
+/* BLOCK TO MOD */
 .block {
+
     position: relative;
     top: 50px;
     right: 50px;
     bottom: 50px;
     left: 50px;
+    text-align: center;
 
     background-color: purple;
     font-size: 24px;
     color: white;
     font-weight: 500;
+    letter-spacing: 1px;
     opacity: 0.9;
     border: 2px solid black;
     border-radius: 2px;
@@ -103,3 +107,4 @@ input {
     padding: 20px;
     
 }
+/* BLOCK TO MOD */

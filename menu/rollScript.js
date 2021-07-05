@@ -4,7 +4,7 @@ rickRoll.src = "assets/rr.mp3";
 const rolling = () => {
     $('#roll').html('<img src="assets/rr.jpg">');
     $('#roll').css('padding','50px 0px 0px 0px')
-    rickRoll.play();
+    // rickRoll.play();
 }
 
 // dziala jak w c++ 

@@ -1,0 +1,27 @@
+.board {
+    margin: 20px;
+    width: 500px;
+    display: inline-block;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.tile {
+    width: 33.3%;
+    height: 166px;
+    float: left;
+    background-color: #fff;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    background-color: #222;
+    font-size: 2rem;
+}
+
+.tile:hover {
+    background-color: #a7a7a7;
+}

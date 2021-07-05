@@ -1,0 +1,135 @@
+.content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#game {
+    width: 80%;
+    margin-left: 10%;
+    height: 550px;
+    background-color: rgb(221, 215, 208);
+    border: 2px solid white;
+}
+
+#counter {
+    margin-top: 20px;
+    margin-right: 40px;
+    color: black;
+    text-align: right;
+    font-family: 'Roboto Mono', monospace;
+    opacity: 0;
+} 
+
+.endCounter {
+    font-size: 80px;
+    font-weight: 900;
+    margin-bottom: -180px;
+    margin-left: 50px;
+}
+
+#character {
+    height: 80px;
+    width: 80px;
+    position: relative;
+    top: 400px;
+    left: 228px;
+    opacity: 0;
+}
+
+#character img {
+    height: 80px;
+    width: 80px;
+}
+.jumpAnimation {
+    animation: jump 700ms linear;
+}
+
+#obstacle {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    top: 250px;
+    left: 1400px;
+    opacity: 0;
+}
+
+.obstacleAnimation {
+    animation: obstacle 1.5s infinite linear;
+}
+
+#obstacle img {
+    height: 150px;
+    width: 150px;
+}
+
+@keyframes obstacle {
+    0%{left: 1400px; opacity: 0.2;}
+    10%{opacity: 1.0;}
+    95%{opacity: 1.0;}
+    100%{left: -20px; opacity: 0.2;}
+}
+
+@keyframes jump {
+    0%{top: 400px;}
+    30%{top: 180px;}
+    60%{top: 170px;}
+    90%{top: 400px;}
+}
+
+#gameMenu {
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: inline-flex;
+}
+
+#charPosition {
+    border: 2px solid white;
+    padding: 20px;
+    width: 300px
+}
+
+#obstPosition {
+    border: 2px solid white;
+    padding: 20px;
+    width: 300px
+}
+
+.title {
+    padding: 0px 0px 10px 0px;
+    font-weight: 900;
+}
+
+.position:nth-child(2) {
+    margin-left: 50px;
+}
+
+
+.buttons {
+    margin: 0;
+    width: 97%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(2, 20%);
+    grid-template-rows: repeat(1, 50px);
+    margin-top: 25px;
+}
+
+.startButton {
+    width: 100%;
+    padding:5px;
+}
+
+.restartButton {
+    margin-left: 50px;
+    width: 100%;
+    padding:5px;
+}
+
+.instruction {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 700;
+}

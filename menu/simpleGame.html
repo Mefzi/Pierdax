@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roll</title>
+    <title>Simple Game</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="icon" href="../icon/icon.png">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="roll.css">
+    <link rel="stylesheet" href="simpleGame.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -32,12 +35,39 @@
             <button class="option"><a href="#">Not Avaible Yet</a></button>
             <button class="option"><a href="#">Not Avaible Yet</a></button>
         </div>
-        <div class="content" id="rickContent">
-            <div id="roll"></div>
+        
+        <div class="content">
+            
+            <div id="game">
+                <div id="counter">Points: 0</div>
+
+                <div id="character"><img src="assets/Dwarf.gif"></div>
+                <div id="obstacle"><img src="assets/dragon.gif"></div>
+
+            </div>
+
+            <!-- <div id="gameMenu">
+                <div id="charPosition" class="position">
+                    <div class="title">CHARACTER</div> <br>
+                </div>
+                <div id="obstPosition" class="position">
+                    <div class="title">OBSTACLE</div> <br>
+                </div>
+            </div> -->
+            
+            <div class="buttons">
+                <button class="startButton">START</button>
+                <button class="restartButton" onclick="location.reload()">RESTART</button>
+            </div>
+
+            <div class="instruction">Press ' W ' to jump</div>
+
         </div>
+
+
         <div class="footer">Made by <i>SexIndustries</i> &copy; 2021</div>
         <script src="../jquery.js"></script>
-        <script src="rollScript.js"></script>
+        <script src="simple.js"></script>
     </div>
 </body>
 </html>

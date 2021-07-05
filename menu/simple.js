@@ -7,7 +7,8 @@ let obstaclePosition = document.getElementById('obstPosition');
 let points = 0;
 let status = true;
 
-// Jumping
+let song = new Audio();
+song.src = "assets/tibia_song.mp3";
 
 // Random obstacle
 let obstacles = new Array(3);
@@ -23,6 +24,7 @@ restartButton.addEventListener("click",game);
 
 function game() {
 
+    song.play();
     setInterval(function() {
         let num = Math.floor(Math.random()*3);
         obstacle.innerHTML = obstacles[num];

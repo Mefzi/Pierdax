@@ -17,24 +17,43 @@ obstacles[1] = '<img src="assets/vandura.gif">'
 obstacles[2] = '<img src="assets/Minotaur.gif">'
 
 
-let startButton = document.querySelector('.startButton');
-startButton.addEventListener("click",game);
-let restartButton = document.querySelector('.restartButton');
-restartButton.addEventListener("click",game);
+/////// PRZYŚPIESZANIE //////// WYBÓR POSTACI ////// MUZYKA PRZY DEADZIE
+let startStatus = false;
+let onKeyPressStart = function (event) {
+    if(startStatus == false) {
+        let keyCode = event.keyCode;
+        if(keyCode==119) {
+            startStatus = true;
+            game();
+            song.play();
+        }
+    }
+    else {
+        return;
+    }
+};
+document.addEventListener('keypress', onKeyPressStart);
+
+let onKeyPressRestart = function (event) {
+    let keyCode = event.keyCode;
+    if(keyCode==114) {
+        location.reload();r
+    }
+};
+document.addEventListener('keypress', onKeyPressRestart);
 
 function game() {
-
-    song.play();
-    setInterval(function() {
-        let num = Math.floor(Math.random()*3);
-        obstacle.innerHTML = obstacles[num];
-    }, 1500);
 
     // Started settings
     obstacle.classList.add("obstacleAnimation");
     character.style.opacity = 1.0;
     obstacle.style.opacity = 1.0;
     counter.style.opacity = 1.0;
+
+    setInterval(function() {
+        let num = Math.floor(Math.random()*3);
+        obstacle.innerHTML = obstacles[num];
+    }, 1500);
 
         function jump() {
             if(status == true) {

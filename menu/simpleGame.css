@@ -104,31 +104,16 @@
     margin-left: 50px;
 }
 
-
-.buttons {
-    margin: 0;
-    width: 97%;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    grid-template-columns: repeat(2, 20%);
-    grid-template-rows: repeat(1, 50px);
-    margin-top: 25px;
-}
-
-.startButton {
-    width: 100%;
-    padding:5px;
-}
-
-.restartButton {
-    margin-left: 50px;
-    width: 100%;
-    padding:5px;
-}
-
 .instruction {
+    margin-left: 10%;
+    width: 80%;
+}
+
+.instruction span {
+    display: block;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
     font-size: 30px;
     font-weight: 700;

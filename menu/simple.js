@@ -111,12 +111,12 @@ function game() {
                         obstacle.style.opacity = 1.0;
                         obstacle.classList.add("obstacleAnimation2");
                     }
-                    if(points >= 4940 && points <= 4950) {
+                    if(points >= 4970 && points <= 4980) {
                         obstacle.classList.remove("obstacleAnimation2");
                         obstacle.style.opacity = 0.0;
                         stage.innerHTML = "STAGE III";
                     }
-                    if (points >= 4950) {
+                    if (points >= 4980) {
                         obstacle.style.opacity = 1.0;
                         obstacle.classList.add("obstacleAnimation3");
                         obstacle.innerHTML = '<img src="assets/dragon_lord.gif">';

@@ -47,6 +47,7 @@ function game() {
     character.style.opacity = 1.0;
     obstacle.style.opacity = 1.0;
     counter.style.opacity = 1.0;
+    stage.style.opacity = 1.0;
 
         function jump() {
             if(status == true) {

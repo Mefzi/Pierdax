@@ -34,6 +34,7 @@
     font-family: 'Tourney', cursive;
     margin-top: 5px;
     position: relative;
+    opacity: 0;
 }
 
 .endCounter {

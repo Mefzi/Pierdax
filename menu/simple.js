@@ -111,22 +111,22 @@ function game() {
                         obstacle.style.opacity = 1.0;
                         obstacle.classList.add("obstacleAnimation2");
                     }
-                    if(points >= 4970 && points <= 4980) {
+                    if(points >= 4990 && points <= 5000) {
                         obstacle.classList.remove("obstacleAnimation2");
                         obstacle.style.opacity = 0.0;
                         stage.innerHTML = "STAGE III";
                     }
-                    if (points >= 4980) {
+                    if (points >= 5000) {
                         obstacle.style.opacity = 1.0;
                         obstacle.classList.add("obstacleAnimation3");
                         obstacle.innerHTML = '<img src="assets/dragon_lord.gif">';
                     }
-                    if(points >= 10000 && points <= 10010) {
+                    if(points >= 10020 && points <= 10030) {
                         obstacle.classList.remove("obstacleAnimation3");
                         obstacle.style.opacity = 0.0;
                         stage.innerHTML = "STAGE IV";
                     }
-                    if (points >= 10010) {
+                    if (points >= 10030) {
                         obstacle.style.opacity = 1.0;
                         obstacle.classList.add("obstacleAnimation4");
                     }

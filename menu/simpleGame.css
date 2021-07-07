@@ -6,19 +6,35 @@
 #game {
     width: 80%;
     margin-left: 10%;
-    height: 550px;
-    background-color: rgb(221, 215, 208);
+    height: 590px;
+    background-repeat: no-repeat;
+    background-size: cover;
     border: 2px solid white;
 }
 
 #counter {
     margin-top: 20px;
     margin-right: 40px;
-    color: black;
+    color: white;
+    font-weight: 600;
     text-align: right;
     font-family: 'Roboto Mono', monospace;
+    top: 0px;
     opacity: 0;
+    position: relative;
+    top: -55px;
 } 
+
+#stage {
+    text-shadow: 2px 2px black;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-size: 36px;
+    letter-spacing: 5px;
+    font-family: 'Tourney', cursive;
+    margin-top: 5px;
+    position: relative;
+}
 
 .endCounter {
     font-size: 80px;
@@ -57,16 +73,47 @@
     animation: obstacle 1.5s infinite linear;
 }
 
+.obstacleAnimation2 {
+    animation: obstacle 1.3s infinite linear;
+}
+
+.obstacleAnimation3 {
+    animation: obstacle 0.9s infinite linear;
+}
+
+.obstacleAnimation4 {
+    animation: obstacle 0.65s infinite linear;
+}
+
+
 #obstacle img {
     height: 150px;
     width: 150px;
 }
 
 @keyframes obstacle {
-    0%{left: 1400px; opacity: 0.2;}
+    0%{left: 90%; opacity: 0.2;}
     10%{opacity: 1.0;}
     95%{opacity: 1.0;}
-    100%{left: -20px; opacity: 0.2;}
+    100%{left: -2%; opacity: 0.2;}
+}
+
+
+@keyframes obstacleHard {
+    0%{left: 90%; opacity: 0.2;}
+    10%{opacity: 1.0;}
+    85%{top: 100px; opacity: 1.0;}
+    98%{top: 250px; opacity: 1,0;}
+    100%{left: -2%; opacity: 0.2;}
+}
+
+@keyframes obstacleHard2 {
+    0%{left: 90%; opacity: 0.2;}
+    10%{opacity: 1.0;}
+    60%{top: 100px; opacity: 1.0;}
+    75%{top: 250px; opacity: 1,0;}
+    98%{top: 250px; opacity: 1,0;}
+    100%{left: -2%; opacity: 0.2;}
 }
 
 @keyframes jump {

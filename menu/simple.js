@@ -4,20 +4,17 @@ let counter = document.getElementById('counter');
 
 let characterPosition = document.getElementById('charPosition');
 let obstaclePosition = document.getElementById('obstPosition');
+let gameStyle = document.getElementById('game');
+let stage = document.getElementById('stage');
 let points = 0;
 let status = true;
 
 let song = new Audio();
 song.src = "assets/tibia_song.mp3";
-
-// Random obstacle
-let obstacles = new Array(3);
-obstacles[0] = '<img src="assets/dragon.gif">'
-obstacles[1] = '<img src="assets/vandura.gif">'
-obstacles[2] = '<img src="assets/Minotaur.gif">'
+song.volume = 0.3;
 
 
-/////// PRZYŚPIESZANIE //////// WYBÓR POSTACI ////// MUZYKA PRZY DEADZIE
+/////// PRZYŚPIESZANIE //////// WYBÓR POSTACI ////// MUZYKA PRZY DEADZIE ///// ŚCISZANIE MUZYKI LUB WYCISZANIE
 let startStatus = false;
 let onKeyPressStart = function (event) {
     if(startStatus == false) {
@@ -46,14 +43,10 @@ function game() {
 
     // Started settings
     obstacle.classList.add("obstacleAnimation");
+    gameStyle.style.backgroundImage = 'url("assets/tibja.jpg")';
     character.style.opacity = 1.0;
     obstacle.style.opacity = 1.0;
     counter.style.opacity = 1.0;
-
-    setInterval(function() {
-        let num = Math.floor(Math.random()*3);
-        obstacle.innerHTML = obstacles[num];
-    }, 1500);
 
         function jump() {
             if(status == true) {
@@ -79,21 +72,26 @@ function game() {
         document.addEventListener('keypress', onKeyPress)
         
 
+        // setInterval(function() {
+        //     let num = Math.floor(Math.random()*3);
+        //     obstacle.innerHTML = obstacles[num];
+        // }, 1500);
 
-        // let characterRight = window.getComputedStyle(character).getPropertyValue("right");
-        // let characterLeft = window.getComputedStyle(character).getPropertyValue("left");
+        let level = 1;
         function checkDead() {
             let obstLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
             let charTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
             if(status == true) {
+
                 if(obstLeft>228 && obstLeft<308 && charTop>=250) {
+
 
                     obstacle.style.animation = "none";
                     obstacle.style.display = "none";
 
-                    character.innerHTML = '<img src="assets/DeadBody.png">'
+                    character.innerHTML = '<img src="assets/DeadBody.png">';
 
-                    counter.innerHTML = "Congratulations! <br> You got " + points + " points"
+                    counter.innerHTML = "Congratulations! <br> You got " + points + " points";
                     counter.style.textAlign = "center";
                     counter.classList.add("endCounter");
 
@@ -102,6 +100,35 @@ function game() {
                 }
                 else {
                     counter.innerHTML = "Points: " + points++;
+
+                    if(points >= 2060 && points <= 2070) {
+                        obstacle.classList.remove("obstacleAnimation");
+                        obstacle.style.opacity = 0.0;
+                        stage.innerHTML = "STAGE II";
+                    }
+                    if (points >= 2070) {
+                        obstacle.style.opacity = 1.0;
+                        obstacle.classList.add("obstacleAnimation2");
+                    }
+                    if(points >= 4890 && points <= 4900) {
+                        obstacle.classList.remove("obstacleAnimation2");
+                        obstacle.style.opacity = 0.0;
+                        stage.innerHTML = "STAGE III";
+                    }
+                    if (points >= 4900) {
+                        obstacle.style.opacity = 1.0;
+                        obstacle.classList.add("obstacleAnimation3");
+                        obstacle.innerHTML = '<img src="assets/dragon_lord.gif">';
+                    }
+                    if(points >= 10000 && points <= 10010) {
+                        obstacle.classList.remove("obstacleAnimation3");
+                        obstacle.style.opacity = 0.0;
+                        stage.innerHTML = "STAGE IV";
+                    }
+                    if (points >= 10010) {
+                        obstacle.style.opacity = 1.0;
+                        obstacle.classList.add("obstacleAnimation4");
+                    }
                 }
             }
             else {
@@ -109,29 +136,6 @@ function game() {
             }
         }
 
-    //     function positionDisplay() {
-    //         let characterRight = window.getComputedStyle(character).getPropertyValue("right");
-    //         let characterLeft = window.getComputedStyle(character).getPropertyValue("left");
-    //         let characterTop = window.getComputedStyle(character).getPropertyValue("top");
-    //         let characterBottom = window.getComputedStyle(character).getPropertyValue("bottom");
-    //         characterPosition.innerHTML =   '<div class="title"> CHARACTER </div>' +
-    //                                         "Right: " + characterRight + "<br>" + 
-    //                                         "Left: " + characterLeft + "<br>" + 
-    //                                         "Top: " + characterTop + "<br>" +
-    //                                         "Bottom: " + characterBottom + "<br>";  
-
-    //         let obstacleRight = window.getComputedStyle(obstacle).getPropertyValue("right");
-    //         let obstacleLeft = window.getComputedStyle(obstacle).getPropertyValue("left");
-    //         let obstacleTop = window.getComputedStyle(obstacle).getPropertyValue("top");
-    //         let obstacleBottom = window.getComputedStyle(obstacle).getPropertyValue("bottom");
-    //         obstaclePosition.innerHTML =   '<div class="title"> OBSTACLE </div>' +
-    //                                         "Right: " + obstacleRight + "<br>" + 
-    //                                         "Left: " + obstacleLeft + "<br>" + 
-    //                                         "Top: " + obstacleTop + "<br>" +
-    //                                         "Bottom: " + obstacleBottom + "<br>";                                               
-    //     }
-
-    // setInterval(positionDisplay, 10);
     setInterval(checkDead, 10);
 
 }

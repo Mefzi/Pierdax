@@ -89,6 +89,7 @@ function game() {
 
                     obstacle.style.animation = "none";
                     obstacle.style.display = "none";
+                    stage.style.opacity = 0;
 
                     character.innerHTML = '<img src="assets/DeadBody.png">';
 
@@ -107,7 +108,7 @@ function game() {
                         obstacle.style.opacity = 0.0;
                         stage.innerHTML = "STAGE II";
                     }
-                    if (points >= 2070) {
+                    if (points >= 2100) {
                         obstacle.style.opacity = 1.0;
                         obstacle.classList.add("obstacleAnimation2");
                     }
@@ -116,7 +117,7 @@ function game() {
                         obstacle.style.opacity = 0.0;
                         stage.innerHTML = "STAGE III";
                     }
-                    if (points >= 5000) {
+                    if (points >= 5050) {
                         obstacle.style.opacity = 1.0;
                         obstacle.classList.add("obstacleAnimation3");
                         obstacle.innerHTML = '<img src="assets/dragon_lord.gif">';
@@ -126,7 +127,7 @@ function game() {
                         obstacle.style.opacity = 0.0;
                         stage.innerHTML = "STAGE IV";
                     }
-                    if (points >= 10030) {
+                    if (points >= 10080) {
                         obstacle.style.opacity = 1.0;
                         obstacle.classList.add("obstacleAnimation4");
                     }
